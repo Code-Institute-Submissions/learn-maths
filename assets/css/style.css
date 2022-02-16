@@ -1,3 +1,9 @@
 body {
-    background-color: blue;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    color: #445361;
+}
+
+.heading {
+    font-size: 2.5em;
 }
