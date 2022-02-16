@@ -1,9 +1,49 @@
 body {
-    text-align: center;
     font-family: "Raleway", sans-serif;
     color: #445361;
 }
 
 .heading {
+    text-align: center;
     font-size: 2.5em;
 }
+
+#square-sum {
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#square-diff {
+    width: 33%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+#square-conjugate {
+    width: 33%;
+    float: right;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.input-box {
+    height: 20px;
+    width: 50px;
+    text-align: center;
+}
+
+
+#game-area {
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
