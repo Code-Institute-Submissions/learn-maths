@@ -11,22 +11,22 @@ body {
 #square-sum {
     width: 33%;
     float: left;
-    text-align: center;
-    padding-top: 20px;
+    text-align: left;
 }
 
 #square-diff {
     width: 33%;
     margin: 0 auto;
-    text-align: center;
-    padding-top: 20px;
-    
+    text-align: left;
 }
 
 #square-conjugate {
     width: 33%;
     float: right;
-    text-align: center;
+    text-align: left;
+}
+
+.equation {
     padding-top: 20px;
 }
 
