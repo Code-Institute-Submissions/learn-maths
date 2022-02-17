@@ -37,8 +37,14 @@ body {
 }
 
 
-#game-area {
+#practice-area {
+    padding-top: 30px;
+    padding-left: 30px;
+}
 
+#challenge-area {
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 input::-webkit-outer-spin-button,
