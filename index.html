@@ -20,7 +20,7 @@
             <li><p>Divide the two numbers in two pieces each: 23 = 20 + 3 and 17 = 20 - 3</p></li>
             <li>
                 <p>Use the so-called binomial squared identities:                
-                    <div id="square-sum">
+                    <div class="square-sum">
                         <div class="equation">
                             <b>
                                 <span>23</span>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
 
-                    <div id="square-conjugate">
+                    <div class="square-conjugate">
                         <div class="equation">
                             <b>
                                 <span>23</span>
@@ -84,7 +84,7 @@
                     </div>
 
 
-                    <div id="square-diff">
+                    <div class="square-diff">
                         <div class="equation">
                             <b><span>17</span>
                                 <span><sup>2</sup></span>
@@ -122,10 +122,13 @@
 
     <section id="practice-area">
         <h2>Practice Area</h2>
-        <div id="square-sum">
+        <label for="enter-number">Enter a Number (11- 99): </label>
+        <input class="input-box" id="user-number" type="number" min="11" max="99">
+        <br>
+        <div class="square-sum">
             <div class="equation">
                 <b>
-                    <span>23</span>
+                    <span class="number-sum">0</span>
                     <span><sup>2</sup></span>
                     <span> =</span>
                 </b>
@@ -133,46 +136,46 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number" value="400">
+                <input class="input-box" type="number">
                 <span> + </span>
-                <input class="input-box" type="number" value="120">
+                <input class="input-box" type="number">
                 <span> + </span>
-                <input class="input-box" type="number" value="9">
+                <input class="input-box" type="number">
             </div>
             
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number" value="529">
+                <input class="input-box" type="number">
             </div>
         </div>
 
-        <div id="square-conjugate">
+        <div class="square-conjugate">
             <div class="equation">
                 <b>
-                    <span>23</span>
+                    <span class="number-sum">0</span>
                     <span> x </span>
-                    <span>17</span>
+                    <span class="number-diff">0</span>
                     <span> =</span>
                 </b>
             </div>
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="text" value="20&sup2">
+                <input class="input-box" type="number">
                 <span> - </span>
-                <input class="input-box" type="text" value="3&sup2">
+                <input class="input-box" type="number">
             </div>
         
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number" value="391">
+                <input class="input-box" type="number">
             </div>
         </div>
 
 
-        <div id="square-diff">
+        <div class="square-diff">
             <div class="equation">
-                <b><span>17</span>
+                <b><span class="number-diff">0</span>
                     <span><sup>2</sup></span>
                     <span> =</span>
                 </b>
@@ -180,16 +183,16 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number" value="400">
+                <input class="input-box" type="number">
                 <span> - </span>
-                <input class="input-box" type="number" value="120">
+                <input class="input-box" type="number">
                 <span> + </span>
-                <input class="input-box" type="number" value="9">
+                <input class="input-box" type="number">
             </div>
             
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number" value="289">
+                <input class="input-box" type="number">
             </div>
         </div>
     </section>
