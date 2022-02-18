@@ -36,6 +36,10 @@ body {
     text-align: center;
 }
 
+#theory {
+    padding-top: 30px;
+    padding-left: 30px;
+}
 
 #practice-area {
     padding-top: 30px;

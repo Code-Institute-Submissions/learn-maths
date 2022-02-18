@@ -122,5 +122,49 @@ function zeroeFields() {
     document.getElementById('result-conjugate').value = '';
 
     document.getElementById('result-diff').value = '';
+}
+
+document.getElementById('start-game').addEventListener('click', function (){
+    document.getElementById("answer-box").addEventListener('keydown', function(event){
+        if (event.key === 'Enter') {
+            checkAnswer();
+        }
+    })
+    runGame();
+});
+
+function runGame () {
+    generateQuestion ();
+    writeQuestion ();
+}
+
+function generateQuestion() {
+    let num1;
+    let num2;
+    if (square) {
+        num2 = num1;
+    } else {
+        let mod = num1 % 10;
+        if (mod <= 5) {
+            num2 = num1 - 2 * mod;
+        } else {
+         num2 = num1 + 2 * (10 - mod);
+        }
+    }     
+}
+
+function writeQuestion () {
+
+}
+
+function checkAnswer () {
+    runGame ();
+}
+
+function incrementCorrectAnswers () {
+
+}
+
+function incrementIncorrectAnswers () {
 
 }

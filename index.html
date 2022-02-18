@@ -14,7 +14,7 @@
 <body>
     <h1 class="heading"><img src="assets/images/x2.png" alt="logo"> Mental Maths: Squaring</h1>
 
-    <section id="Theory">
+    <section id="theory">
         <h2>Example: Calculate&ensp;23<sup>2</sup>,&ensp;17<sup>2</sup>,&ensp;and&ensp;23 x 17</h2>
         <ol>
             <li><p>Divide the two numbers in two pieces each: 23 = 20 + 3 and 17 = 20 - 3</p></li>
@@ -202,8 +202,20 @@
         </div>
     </section>
 
-    <section id="challenge-area" style="clear: both">
+    <section id="challenge-area">
         <h2>Challenge Area</h2>
+        <div>
+            <button id="start-game">Start Game</button>
+        </div>
+        <div class="calculate-square equation">
+            <b><span class="first-number">0</span>
+            <span id="exponent"><sup></sup></span>
+            <span id="multiply-sign"> x </span>
+            <span class="second-number">0</span>
+            <span> = </span>
+            </b>
+            <input class="input-box" id="answer-box" type="number">
+        </div>
     </section>
 
     <script src="assets/js/script.js"></script>
