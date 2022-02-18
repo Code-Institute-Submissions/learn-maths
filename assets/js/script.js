@@ -5,7 +5,7 @@ document.getElementById('user-number').addEventListener('keydown', function(even
 })
 
 function writeNumbers() {
-    let userNumber = document.getElementById('user-number').value;
+    let userNumber = parseInt(document.getElementById('user-number').value);
     let mod = userNumber % 10;
     let numberSum=document.getElementsByClassName('number-sum');
     let numberDiff=document.getElementsByClassName('number-diff');
