@@ -5,13 +5,10 @@ document.getElementById('user-number').addEventListener('keydown', function(even
 })
 
 function writeNumbers() {
-    let userNumber = parseInt(document.getElementById('user-number').value);
+    let userNumber = document.getElementById('user-number').value;
     let mod = userNumber % 10;
-    console.log(userNumber);
     let numberSum=document.getElementsByClassName('number-sum');
-    console.log(numberSum);
     let numberDiff=document.getElementsByClassName('number-diff');
-    console.log(numberDiff);
         if (mod <= 5) { 
             for (let number of numberSum) {
                 number.textContent = userNumber;
@@ -28,4 +25,102 @@ function writeNumbers() {
             }
 
         }
+}
+
+document.getElementById('check-answers').addEventListener('click', function (){
+    if (checkAnswers()) {
+        alert("Well done! You can either practice more or go to the challenge section below");
+        zeroeFields();
+    } else {
+        alert("Something is wrong! Try to correct your answers");
+    }
+});
+
+function checkAnswers (){
+    let numberSum = parseInt(document.getElementsByClassName('number-sum')[0].textContent);
+    let ones = numberSum % 10;
+    let tens = numberSum - ones;
+
+    let correct = true;
+
+    let squareTens = document.getElementsByClassName('square-tens');
+    for (let squareTen of squareTens) {
+        if (squareTen.value != tens**2) {
+            correct = false;
+            return correct;
+        }
+    } 
+
+    let productTwices = document.getElementsByClassName('product-twice');
+    for (let productTwice of productTwices) {
+        if (productTwice.value != 2 * tens * ones) {
+            correct = false;
+            return correct;
+        }
+    }
+
+    let squareOnes = document.getElementsByClassName('square-ones');
+    for (let squareOne of squareOnes) {
+        if (squareOne.value != ones**2) {
+            correct = false;
+            return correct;
+        }
+    }
+
+    let resultSum = document.getElementById('result-sum').value;
+    if (resultSum != tens**2 + 2 * tens * ones + ones**2) {
+        correct = false;
+        return correct;
+    }
+
+    let resultConjugate = document.getElementById('result-conjugate').value;
+    if (resultConjugate != tens**2 - ones**2) {
+        correct = false;
+        return correct;
+    }
+
+    let resultDiff = document.getElementById('result-diff').value;
+    if (resultDiff != tens**2 - 2 * tens * ones + ones**2) {
+        correct = false;
+        return correct;
+    }
+
+    return correct;
+}
+
+function zeroeFields() {
+    document.getElementById('user-number').value = '';
+    document.getElementById('user-number').focus();
+
+    let numberSum=document.getElementsByClassName('number-sum');
+    let numberDiff=document.getElementsByClassName('number-diff');
+    for (let number of numberSum) {
+        number.textContent = '0';
+    } 
+    for (let number of numberDiff) {
+        number.textContent = '0';
+    }
+
+    let squareTens = document.getElementsByClassName('square-tens');
+    for (let squareTen of squareTens) {
+        squareTen.value = '';
+    }
+    
+    let productTwices = document.getElementsByClassName('product-twice');
+    for (let productTwice of productTwices) {
+        productTwice.value = '';
+    }
+
+    let squareOnes = document.getElementsByClassName('square-ones');
+    for (let squareOne of squareOnes) {
+        squareOne.value = '';
+    }
+    
+
+    document.getElementById('result-sum').value = '';
+
+    document.getElementById('result-conjugate').value = '';
+
+    document.getElementById('result-diff').value = '';
+
 }

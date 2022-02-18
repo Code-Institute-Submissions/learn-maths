@@ -122,9 +122,10 @@
 
     <section id="practice-area">
         <h2>Practice Area</h2>
-        <label for="enter-number">Enter a Number (11- 99): </label>
-        <input class="input-box" id="user-number" type="number" min="11" max="99">
-        <br>
+        <div>
+            <label for="enter-number">Enter a Number (11- 99): </label>
+            <input class="input-box" id="user-number" type="number" min="11" max="99">
+        </div>
         <div class="square-sum">
             <div class="equation">
                 <b>
@@ -136,16 +137,16 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number">
+                <input class="input-box square-tens" type="number">
                 <span> + </span>
-                <input class="input-box" type="number">
+                <input class="input-box product-twice" type="number">
                 <span> + </span>
-                <input class="input-box" type="number">
+                <input class="input-box square-ones" type="number">
             </div>
             
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number">
+                <input class="input-box" id="result-sum" type="number">
             </div>
         </div>
 
@@ -161,14 +162,14 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number">
+                <input class="input-box square-tens" type="number">
                 <span> - </span>
-                <input class="input-box" type="number">
+                <input class="input-box square-ones" type="number">
             </div>
         
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number">
+                <input class="input-box" id="result-conjugate" type="number">
             </div>
         </div>
 
@@ -183,17 +184,21 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number">
+                <input class="input-box square-tens" type="number">
                 <span> - </span>
-                <input class="input-box" type="number">
+                <input class="input-box product-twice" type="number">
                 <span> + </span>
-                <input class="input-box" type="number">
+                <input class="input-box square-ones" type="number">
             </div>
             
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="number">
+                <input class="input-box" id="result-diff" type="number">
             </div>
+        </div>
+        <br>
+        <div>
+            <button id="check-answers">Check Answers</button>
         </div>
     </section>
 
