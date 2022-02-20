@@ -125,14 +125,19 @@ function zeroeFields() {
 }
 
 //Challenge
-
+let started = false;
 document.getElementById('start-game').addEventListener('click', function (){
-    document.getElementById("answer-box").addEventListener('keydown', function(event){
-        if (event.key === 'Enter') {
-            checkAnswer();
-        }
-    })
-    writeQuestion();
+    if (!started) {
+        started = true;
+        document.getElementById("answer-box").addEventListener('keydown', function(event){
+            if (event.key === 'Enter') {
+                checkAnswer();
+            }
+        })
+        writeQuestion();
+    } else {
+        alert("You already started the challenge! Answer the question!")
+    } 
 });
 
 function generateQuestion() {
@@ -169,7 +174,6 @@ function writeQuestion () {
 function checkAnswer () {
     let firstNumber = parseInt(document.getElementById('first-number').textContent);
     let secondNumber = parseInt(document.getElementById('second-number').textContent);
-    console.log(secondNumber);
     let userAnswer = parseInt(document.getElementById('answer-box').value);
     if (Number.isNaN(secondNumber)) {
         let rightAnswer = firstNumber ** 2;
@@ -187,9 +191,9 @@ function checkAnswer () {
         }
     }
     document.getElementById('answer-box').value='';
-    document.getElementById('answer-box').focus();
+    document.getElementById('answer-box').focus();   
     writeQuestion();
-}
+    }
 
 function incrementCorrectAnswers () {
 
