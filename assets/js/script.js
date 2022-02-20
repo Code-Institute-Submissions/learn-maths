@@ -124,41 +124,71 @@ function zeroeFields() {
     document.getElementById('result-diff').value = '';
 }
 
+//Challenge
+
 document.getElementById('start-game').addEventListener('click', function (){
     document.getElementById("answer-box").addEventListener('keydown', function(event){
         if (event.key === 'Enter') {
             checkAnswer();
         }
     })
-    runGame();
+    writeQuestion();
 });
 
-function runGame () {
-    generateQuestion ();
-    writeQuestion ();
-}
-
 function generateQuestion() {
-    let num1;
-    let num2;
-    if (square) {
+    let tens = Math.floor(Math.random() * 10) + 1;
+    let ones = Math.floor(Math.random() * 9) + 1;
+    let num1 = tens * 10 + ones;
+    let calculateSquare = Math.floor(Math.random() * 2);
+    if (calculateSquare) {
         num2 = num1;
     } else {
-        let mod = num1 % 10;
-        if (mod <= 5) {
-            num2 = num1 - 2 * mod;
+        if (ones <= 5) {
+            num2 = num1 - 2 * ones;
         } else {
-         num2 = num1 + 2 * (10 - mod);
+         num2 = num1 + 2 * (10 - ones);
         }
-    }     
+    }
+    return [num1, num2]     
 }
 
 function writeQuestion () {
-
+    let num = generateQuestion();
+    document.getElementById('first-number').innerText = num[0];
+    if (num[0]===num[1]) {       
+        document.getElementById('exponent').innerText = 2;
+        document.getElementById('multiply-sign').innerText = '';
+        document.getElementById('second-number').innerText = '';
+    } else {
+        document.getElementById('exponent').innerText = '';
+        document.getElementById('multiply-sign').innerText = ' x ';
+        document.getElementById('second-number').innerText = num[1];
+    }
 }
 
 function checkAnswer () {
-    runGame ();
+    let firstNumber = parseInt(document.getElementById('first-number').textContent);
+    let secondNumber = parseInt(document.getElementById('second-number').textContent);
+    console.log(secondNumber);
+    let userAnswer = parseInt(document.getElementById('answer-box').value);
+    if (Number.isNaN(secondNumber)) {
+        let rightAnswer = firstNumber ** 2;
+        if (rightAnswer != userAnswer) {
+            alert(`Wrong answer: You answered ${userAnswer}. The correct answer was  ${rightAnswer}!`);
+        } else {
+            alert("Well done!");
+        }
+    } else {
+        let rightAnswer = firstNumber * secondNumber;
+        if (rightAnswer != userAnswer) {
+            alert(`Wrong answer: You answered ${userAnswer}. The correct answer was  ${rightAnswer}!`);
+        } else {
+            alert("Well done!");
+        }
+    }
+    document.getElementById('answer-box').value='';
+    document.getElementById('answer-box').focus();
+    writeQuestion();
 }
 
 function incrementCorrectAnswers () {
