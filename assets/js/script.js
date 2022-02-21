@@ -1,3 +1,5 @@
+//Practice
+
 document.getElementById('user-number').addEventListener('keydown', function(event){
     if (event.key === 'Enter') {
         writeNumbers()
@@ -6,26 +8,36 @@ document.getElementById('user-number').addEventListener('keydown', function(even
 
 function writeNumbers() {
     let userNumber = parseInt(document.getElementById('user-number').value);
-    let mod = userNumber % 10;
-    let numberSum=document.getElementsByClassName('number-sum');
-    let numberDiff=document.getElementsByClassName('number-diff');
+    if (Number.isNaN(userNumber)||(userNumber <=5 )) {
+       alert("The number must be greater than 5!");
+       zeroeFields();
+    }
+    else if (!(userNumber % 10)) {
+        alert("The number must not be a multiple of 10!");
+        zeroeFields();
+    }
+    else {
+        let mod = userNumber % 10;
+        let numberSum=document.getElementsByClassName('number-sum');
+        let numberDiff=document.getElementsByClassName('number-diff');
         if (mod <= 5) { 
             for (let number of numberSum) {
                 number.textContent = userNumber;
             } 
             for (let number of numberDiff) {
-                number.textContent = userNumber - 2 * mod;
+                 number.textContent = userNumber - 2 * mod;
             }
         } else {
             for (let number of numberDiff) {
-                number.textContent = userNumber;
+                    number.textContent = userNumber;
             } 
             for (let number of numberSum) {
-                number.textContent = userNumber + 2 * (10 - mod);
-            }
-
+                    number.textContent = userNumber + 2 * (10 - mod);
+            }   
         }
+    }
 }
+
 
 document.getElementById('check-answers').addEventListener('click', function (){
     if (checkAnswers()) {
@@ -141,20 +153,24 @@ document.getElementById('start-game').addEventListener('click', function (){
 });
 
 function generateQuestion() {
-    let tens = Math.floor(Math.random() * 10) + 1;
-    let ones = Math.floor(Math.random() * 9) + 1;
-    let num1 = tens * 10 + ones;
-    let calculateSquare = Math.floor(Math.random() * 2);
-    if (calculateSquare) {
-        num2 = num1;
-    } else {
-        if (ones <= 5) {
-            num2 = num1 - 2 * ones;
+    let num1;
+    let num2;
+    do {
+        let tens = Math.floor(Math.random() * 10) + 1;
+        let ones = Math.floor(Math.random() * 9) + 1;
+        num1 = tens * 10 + ones;
+        let calculateSquare = Math.floor(Math.random() * 2);
+        if (calculateSquare) {
+            num2 = num1;
         } else {
-         num2 = num1 + 2 * (10 - ones);
-        }
-    }
-    return [num1, num2]     
+            if (ones <= 5) {
+                num2 = num1 - 2 * ones;
+            } else {
+                num2 = num1 + 2 * (10 - ones);
+            }       
+        } 
+    } while (num2 < 11);
+    return [num1, num2];     
 }
 
 function writeQuestion () {

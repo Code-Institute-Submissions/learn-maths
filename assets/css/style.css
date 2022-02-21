@@ -46,9 +46,30 @@ body {
     padding-left: 30px;
 }
 
+#input-user-number::after {
+    content: "The number must not be a multiple of 10 and should preferably be between 11 and 105.";
+    display: block;
+    font-size: 0.8em;
+    font-weight: 900;
+    position: relative;
+    bottom: -0.5em;
+    padding-bottom: 20px;
+}
+
 #challenge-area {
     padding-top: 30px;
     padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+#button-start-game::after {
+    content: "Answer the question below and press ENTER";
+    display: block;
+    font-size: 0.8em;
+    font-weight: 900;
+    position: relative;
+    bottom: -0.5em;
+    padding-bottom: 20px;
 }
 
 input::-webkit-outer-spin-button,
