@@ -182,7 +182,7 @@ function generateQuestion() {
                 num2 = num1 + 2 * (10 - ones);
             }       
         } 
-    } while (num2 < 11);
+    } while ((num2 < 11) || (num2 > 110));
     return [num1, num2];     
 }
 
