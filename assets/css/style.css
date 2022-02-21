@@ -57,9 +57,19 @@ body {
 }
 
 #challenge-area {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
+    display: inline-block;
+}
+
+#score-area {
+    padding: 30px;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+#correct {
+    color: rgb(3, 250, 24);
 }
 
 #button-start-game::after {

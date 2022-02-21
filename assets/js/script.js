@@ -143,6 +143,7 @@ document.getElementById('start-game').addEventListener('click', function (){
         started = true;
         document.getElementById("answer-box").addEventListener('keydown', function(event){
             if (event.key === 'Enter') {
+                incrementTotalAnswers();
                 checkAnswer();
             }
         })
@@ -197,6 +198,7 @@ function checkAnswer () {
             alert(`Wrong answer: You answered ${userAnswer}. The correct answer was  ${rightAnswer}!`);
         } else {
             alert("Well done!");
+            incrementCorrectAnswers();
         }
     } else {
         let rightAnswer = firstNumber * secondNumber;
@@ -204,6 +206,7 @@ function checkAnswer () {
             alert(`Wrong answer: You answered ${userAnswer}. The correct answer was  ${rightAnswer}!`);
         } else {
             alert("Well done!");
+            incrementCorrectAnswers();
         }
     }
     document.getElementById('answer-box').value='';
@@ -212,9 +215,12 @@ function checkAnswer () {
     }
 
 function incrementCorrectAnswers () {
-
+    let correct = parseInt(document.getElementById('correct').innerText);
+    document.getElementById('correct').innerText = ++correct;
+    
 }
 
-function incrementIncorrectAnswers () {
-
+function incrementTotalAnswers () {
+    let total = parseInt(document.getElementById('total').innerText);
+    document.getElementById('total').innerText = ++total;
 }
