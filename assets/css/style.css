@@ -27,7 +27,7 @@ body {
 }
 
 .equation {
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 .input-box {
@@ -37,13 +37,16 @@ body {
 }
 
 #theory {
+    width: 85%;
     padding-top: 30px;
-    padding-left: 30px;
+    margin: 0 auto;
 }
 
 #practice-area {
+    width: 85%;
     padding-top: 30px;
-    padding-left: 30px;
+    margin: 0 auto;
+    clear: both;
 }
 
 #input-user-number::after {
@@ -57,15 +60,22 @@ body {
 }
 
 #challenge-area {
-    padding: 30px;
+    width: 85%;
+    padding-top: 30px;
+    margin: 0 auto;
+    clear: both;
+}
+
+#question-area {
     display: inline-block;
+    padding-right: 30px;
 }
 
 #score-area {
-    padding: 30px;
     display: inline-block;
     font-size: 1.2em;
     font-weight: 900;
+    padding-top: 30px;
 }
 
 #correct {
@@ -86,5 +96,45 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .square-sum {
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
+    
+    .square-diff {
+        width: 50%;
+        margin: 0 0 0 auto;
+        text-align: center;
+    }
+    
+    .square-conjugate {
+        width: 100%;
+        float: left;
+        text-align: center;
+    }  
+}
+
+@media (max-width: 700px) {
+    .square-sum {
+        width: 100%;
+        float: left;
+    }
+    
+    .square-diff {
+        width: 100%;
+        float: left;
+    }
+    
+    .square-conjugate {
+        width: 100%;
+        float: left;
+    }  
+    body {
+        text-align: center;
+    }
 }
 
