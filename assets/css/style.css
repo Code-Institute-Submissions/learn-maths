@@ -8,6 +8,12 @@ body {
     font-size: 2.5em;
 }
 
+#logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
 .square-sum {
     width: 33%;
     float: left;
@@ -40,6 +46,7 @@ body {
     width: 85%;
     padding-top: 30px;
     margin: 0 auto;
+    clear: both;
 }
 
 #practice-area {
@@ -56,12 +63,13 @@ body {
     font-weight: 900;
     position: relative;
     bottom: -0.5em;
-    padding-bottom: 20px;
-}
+    padding-bottom: 5px;
+    }
 
 #challenge-area {
     width: 85%;
     padding-top: 30px;
+    padding-bottom: 30px;
     margin: 0 auto;
     clear: both;
 }
@@ -89,8 +97,8 @@ body {
     font-weight: 900;
     position: relative;
     bottom: -0.5em;
-    padding-bottom: 20px;
-}
+    padding-bottom: 5px;
+   }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -119,6 +127,34 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 700px) {
+    .heading {
+        font-size: 2em;
+    }
+    
+    #theory {
+        padding-top: 10px;
+    }
+
+    #display-numbers {
+        display: block;
+    }
+
+    .equation {
+        padding-top: 15px;
+    }
+
+    #first-equation {
+        padding-top: 0;
+    }
+
+    #practice-area {
+        padding-top: 10px;
+    }
+
+    #challenge-area {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     .square-sum {
         width: 100%;
         float: left;
@@ -136,5 +172,12 @@ input::-webkit-inner-spin-button {
     body {
         text-align: center;
     }
-}
 
+    #question-area {
+        display: block;
+        padding-right: 0;
+}
+    #score-area {
+        display: block;
+    }
+}

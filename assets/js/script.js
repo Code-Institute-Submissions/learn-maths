@@ -43,11 +43,9 @@ for (let i=0; i <=2; i++) {
     document.getElementsByClassName('check-answers')[i].addEventListener('click', function (){
         if (checkAnswers[i]()) {
             document.getElementsByClassName('result')[i].setAttribute("style", "background-color: rgb(3, 250, 24)");
-            alert("Well done! When you have answered all three questions you can either practice more or go to the challenge section below");
-        } else {
+            } else {
             document.getElementsByClassName('result')[i].setAttribute("style", "background-color: red");
-            alert("Something is wrong! Try to correct your answers");
-            }
+        }
     });
 }
 
@@ -85,27 +83,24 @@ for (let i = 0; i <= 2; i++) {
                 return correct;
             }
     
-        switch (i) {
-            case '0':           
-                let resultSum = document.getElementById('result-sum').value;
-                if (resultSum != tens**2 + 2 * tens * ones + ones**2) {
-                    correct = false;
-                    return correct;
-                }
-                   
-            case '1':       
-                let resultConjugate = document.getElementById('result-conjugate').value;
-                if (resultConjugate != tens**2 - ones**2) {
-                    correct = false;
-                    return correct;
-                }
-
-            case '2':
-                let resultDiff = document.getElementById('result-diff').value;
-                if (resultDiff != tens**2 - 2 * tens * ones + ones**2) {
-                    correct = false;
-                    return correct;
-                }               
+        if (i === 0){           
+            let resultSum = parseInt(document.getElementById('result-sum').value);
+            if (resultSum !== tens**2 + 2 * tens * ones + ones**2) {
+                correct = false;
+                return correct;
+            }
+        } else if (i === 1){      
+            let resultConjugate = parseInt(document.getElementById('result-conjugate').value);
+            if (resultConjugate !== tens**2 - ones**2) {
+                correct = false;
+                return correct;
+            }
+        } else if (i === 2){
+            let resultDiff =parseInt(document.getElementById('result-diff').value);
+            if (resultDiff !== tens**2 - 2 * tens * ones + ones**2) {
+                correct = false;
+                return correct;
+            }              
         }
         return correct;
     })
@@ -207,18 +202,17 @@ function checkAnswer () {
     if (Number.isNaN(secondNumber)) {
         let rightAnswer = firstNumber ** 2;
         if (rightAnswer != userAnswer) {
-            alert(`Wrong answer: You answered ${userAnswer}. The correct answer was  ${rightAnswer}!`);
+            document.getElementById('answer-box').setAttribute("style", "background-color: red");
         } else {
-            alert("Well done!");
+            document.getElementById('answer-box').setAttribute("style", "background-color: rgb(3, 250, 24)");
             incrementCorrectAnswers();
         }
     } else {
         let rightAnswer = firstNumber * secondNumber;
         if (rightAnswer != userAnswer) {
-            alert(`Wrong answer: You answered ${userAnswer}. The correct answer was  ${rightAnswer}!`);
+            document.getElementById('answer-box').setAttribute("style", "background-color: red");
         } else {
-            alert("Well done!");
-            incrementCorrectAnswers();
+            document.getElementById('answer-box').setAttribute("style", "background-color: rgb(3, 250, 24)");
         }
     }
     document.getElementById('answer-box').value='';
