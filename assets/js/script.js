@@ -150,7 +150,6 @@ document.getElementById('start-game').addEventListener('click', function (){
         started = true;
         document.getElementById("answer-box").addEventListener('keydown', function(event){
             if (event.key === 'Enter') {
-                incrementTotalAnswers();
                 checkAnswer();
             }
         })
@@ -199,6 +198,7 @@ function checkAnswer () {
     let firstNumber = parseInt(document.getElementById('first-number').textContent);
     let secondNumber = parseInt(document.getElementById('second-number').textContent);
     let userAnswer = parseInt(document.getElementById('answer-box').value);
+    incrementTotalAnswers();
     if (Number.isNaN(secondNumber)) {
         let rightAnswer = firstNumber ** 2;
         if (rightAnswer != userAnswer) {
@@ -213,6 +213,7 @@ function checkAnswer () {
             document.getElementById('answer-box').setAttribute("style", "background-color: red");
         } else {
             document.getElementById('answer-box').setAttribute("style", "background-color: rgb(3, 250, 24)");
+            incrementCorrectAnswers();
         }
     }
     document.getElementById('answer-box').value='';
