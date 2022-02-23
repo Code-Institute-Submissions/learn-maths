@@ -42,9 +42,9 @@ function writeNumbers() {
 for (let i=0; i <=2; i++) {
     document.getElementsByClassName('check-answers')[i].addEventListener('click', function (){
         if (checkAnswers[i]()) {
-            document.getElementsByClassName('result')[i].setAttribute("style", "background-color: rgb(3, 250, 24)");
+            document.getElementsByClassName('check-answers')[i].setAttribute("style", "background-color: rgb(3, 250, 24)");
             } else {
-            document.getElementsByClassName('result')[i].setAttribute("style", "background-color: red");
+            document.getElementsByClassName('check-answers')[i].setAttribute("style", "background-color: red");
         }
     });
 }
@@ -132,15 +132,15 @@ function zeroeFields() {
         squareOne.value = '';
     }
     
+    let results = document.getElementsByClassName('result');
+    for (let result of results) {
+        result.value = '';
+    }
 
-    document.getElementById('result-sum').value = '';
-    document.getElementById('result-sum').setAttribute("style", "background-color: inherit");
-
-    document.getElementById('result-conjugate').value = '';
-    document.getElementById('result-conjugate').setAttribute("style", "background-color: inherit");
-
-    document.getElementById('result-diff').value = '';
-    document.getElementById('result-diff').setAttribute("style", "background-color: inherit");
+    let checkAnswers = document.getElementsByClassName('check-answers');
+    for (let checkAnswer of checkAnswers) {
+        checkAnswer.setAttribute("style", "background-color: default");
+    }
 }
 
 //Challenge
