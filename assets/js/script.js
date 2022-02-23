@@ -203,17 +203,29 @@ function checkAnswer () {
         let rightAnswer = firstNumber ** 2;
         if (rightAnswer != userAnswer) {
             document.getElementById('answer-box').setAttribute("style", "background-color: red");
+            setTimeout(function(){
+                document.getElementById('answer-box').removeAttribute("style");
+            }, 500);
         } else {
             document.getElementById('answer-box').setAttribute("style", "background-color: rgb(3, 250, 24)");
+            setTimeout(function(){
+                document.getElementById('answer-box').removeAttribute("style");
+            }, 500);
             incrementCorrectAnswers();
         }
     } else {
         let rightAnswer = firstNumber * secondNumber;
         if (rightAnswer != userAnswer) {
             document.getElementById('answer-box').setAttribute("style", "background-color: red");
+            setTimeout(function(){
+                document.getElementById('answer-box').removeAttribute("style");
+            }, 500);
         } else {
             document.getElementById('answer-box').setAttribute("style", "background-color: rgb(3, 250, 24)");
             incrementCorrectAnswers();
+            setTimeout(function(){
+                document.getElementById('answer-box').removeAttribute("style");
+            }, 500);
         }
     }
     document.getElementById('answer-box').value='';

@@ -13,4 +13,4 @@ The Mental Maths web site has three sections:
 
     <img src="assets/images/practice-area.PNG" alt="The practice area lets the student to calculate squares">
 - Challenge Area:
-    The students can test his knowledge by calculating squares and product of conjugates mentally. The 
+    The students can test his knowledge by calculating squares and product of conjugates mentally. The application generates a random number between 11 and 109 and chooses randomly between calculating a square or a product of conjugates. The question is displayed and the student has to enter the answer in an input box and press return. If the answer is correct the input box turns green and the score and total number of trials are incremented by one. A new question is displayed and the process continues <em>ad infinitum</em>. 
