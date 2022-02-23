@@ -13,4 +13,9 @@ The Mental Maths web site has three sections:
 
     <img src="assets/images/practice-area.PNG" alt="The practice area lets the student to calculate squares">
 - Challenge Area:
-    The students can test his knowledge by calculating squares and product of conjugates mentally. The application generates a random number between 11 and 109 and chooses randomly between calculating a square or a product of conjugates. The question is displayed and the student has to enter the answer in an input box and press return. If the answer is correct the input box turns green and the score and total number of trials are incremented by one. A new question is displayed and the process continues <em>ad infinitum</em>. 
+    The students can test his knowledge by calculating squares and product of conjugates mentally. The application generates a random number between 11 and 109 and chooses randomly between calculating a square or a product of conjugates. The question is displayed and the student has to enter the answer in an input box and press return. If the answer is correct the input box flashes green and the score and total number of trials are incremented by one. A new question is displayed and the process continues <em>ad infinitum</em>. 
+
+    <img src="assets/images/challenge-area.PNG" alt="The practice area lets the student to calculate squares">
+
+## Testing
+- I checked that the application runs as expected both on PC and mobile. I verified that the input fields only accept numbers; that alerts are sent if the user enters a number less than six or a multiple of ten; that the color coding is correct and that the score is correct.
