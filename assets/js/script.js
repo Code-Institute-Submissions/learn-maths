@@ -139,7 +139,7 @@ function zeroeFields() {
 
     let checkAnswers = document.getElementsByClassName('check-answers');
     for (let checkAnswer of checkAnswers) {
-        checkAnswer.setAttribute("style", "background-color: default");
+        checkAnswer.removeAttribute("style");
     }
 }
 
