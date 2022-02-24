@@ -9,13 +9,16 @@
     <!--Google Font Raleway-->
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
+    <!--link to css style sheet-->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Mental Maths</title>
 </head>
 
 <body>
+    
     <h1 class="heading">Mental Maths: Squaring<img id="logo" src="assets/images/x2.png" alt="logo"></h1>
 
+    <!--Examples of calculating squares-->
     <section id="theory">
         <h2>Example: Calculate&ensp;23<sup>2</sup>,&ensp;17<sup>2</sup>,&ensp;and&ensp;23 x 17</h2>
         <ol>
@@ -28,6 +31,7 @@
             </li>
         </ol>
 
+        <!--Calculating square of sum (23^2)-->
         <div class="square-sum">
             <div class="equation" id="first-equation">
                 <b>
@@ -61,6 +65,7 @@
             </div>
         </div>
 
+        <!--Calculating product of sum and difference or conjugate product (23*17)-->
         <div class="square-conjugate">
             <div class="equation">
                 <b>
@@ -91,6 +96,7 @@
             </div>
         </div>
 
+        <!--Calculating square of difference (17^2)-->
         <div class="square-diff">
             <div class="equation">
                 <b><span>17</span>
@@ -124,13 +130,20 @@
         </div>
     </section>
 
+    <!--The student can practice here-->
     <section id="practice-area">
         <h2>Practice Area</h2>
+
+        <!--The student can enter a number-->
         <div id="input-user-number">
             <label for="user-number">Enter a Number and Press ENTER: </label>
             <input class="input-box" id="user-number" type="number" min="11" max="105">
         </div>
+
+        <!--Calculating square of sum-->
         <div class="square-sum">
+
+            <!--Display of square of sum number-->
             <div class="equation">
                 <b>
                     <span class="number-sum">0</span>
@@ -139,6 +152,7 @@
                 </b>
             </div>
 
+            <!--Entry inputs for sum squared-->
             <div class="equation">
                 <span>= </span>
                 <input class="input-box square-tens" type="number">
@@ -153,13 +167,17 @@
                 <input class="input-box result" id="result-sum" type="number">
             </div>
 
+            <!--Check result button for sum squared-->
             <div class="equation">
                 <button class="check-answers">Check Answers</button>
             </div>
 
         </div>
 
+        <!--Calculating product of sum and difference (conjugate product)-->
         <div class="square-conjugate">
+
+            <!-- Display of conjugate product of numbers-->
             <div class="equation">
                 <b>
                     <span class="number-sum">0</span>
@@ -169,6 +187,7 @@
                 </b>
             </div>
 
+            <!--Entry inputs for conjugate product-->
             <div class="equation">
                 <span>= </span>
                 <input class="input-box square-tens" type="number">
@@ -181,14 +200,17 @@
                 <input class="input-box result" id="result-conjugate" type="number">
             </div>
 
+            <!--Check result button for conjugate product-->
             <div class="equation">
                 <button class="check-answers">Check Answers</button>
             </div>
 
         </div>
 
-
+        <!--Calculating square of difference-->
         <div class="square-diff">
+
+            <!--Display of square of difference number-->
             <div class="equation">
                 <b><span class="number-diff">0</span>
                     <span><sup>2</sup></span>
@@ -196,6 +218,7 @@
                 </b>
             </div>
 
+            <!--Entry inputs for difference squared-->
             <div class="equation">
                 <span>= </span>
                 <input class="input-box square-tens" type="number">
@@ -210,18 +233,25 @@
                 <input class="input-box result" id="result-diff" type="number">
             </div>
 
+            <!--Check result button for difference squared-->
             <div class="equation">
                 <button class="check-answers">Check Answers</button>
             </div>
         </div>
     </section>
 
+    <!--Challenging math game-->
     <section id="challenge-area">
         <div id="question-area">
             <h2>Challenge Area</h2>
+
+            <!--Start challenge button--> 
             <div id="button-start-game">
                 <button id="start-game">Start Game</button>
             </div>
+
+            <!--The application displays the randomly generated question,
+            either a square of a number or the associated conjugate product-->
             <div class="equation" id="question">
                 <b><span id="first-number">0</span>
                     <span><sup id="exponent"></sup></span>
@@ -229,15 +259,20 @@
                     <span id="second-number">0</span>
                     <span> = </span>
                 </b>
+
+                <!--The student inputs his answer-->
                 <input class="input-box" id="answer-box" type="number" required>
             </div>
         </div>
 
+        <!--The application increments the number of correct answers
+            and total number of trials-->
         <div id="score-area">
             <span>Correct Answers: </span><span id="correct">0</span><span> of </span><span id="total">0</span>
         </div>
     </section>
 
+    <!--link to JavaScript file-->
     <script src="assets/js/script.js"></script>
 </body>
 
