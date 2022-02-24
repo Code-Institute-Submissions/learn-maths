@@ -1,3 +1,4 @@
+/*Font and font color in application*/
 body {
     font-family: "Raleway", sans-serif;
     color: #445361;
@@ -8,24 +9,36 @@ body {
     font-size: 2.5em;
 }
 
+/*Center logo*/
 #logo {
     display: block;
     margin: 0 auto;
     padding-top: 10px;
 }
 
+/* Styling for the application's three sections*/
+#theory-area, #practice-area, #challenge-area{
+    width: 85%;
+    padding-top: 30px;
+    margin: 0 auto;
+    clear: both;
+}
+
+/*positioning of sum squared calculation*/
 .square-sum {
     width: 33%;
     float: left;
     text-align: left;
 }
 
+/*positioning of difference squared calculation*/
 .square-diff {
     width: 33%;
     margin: 0 auto;
     text-align: left;
 }
 
+/*positioning of conjugate product calculation*/
 .square-conjugate {
     width: 33%;
     float: right;
@@ -42,20 +55,7 @@ body {
     text-align: center;
 }
 
-#theory {
-    width: 85%;
-    padding-top: 30px;
-    margin: 0 auto;
-    clear: both;
-}
-
-#practice-area {
-    width: 85%;
-    padding-top: 30px;
-    margin: 0 auto;
-    clear: both;
-}
-
+/* Comment after the user number entry in the practice area*/
 #input-user-number::after {
     content: "The number must not be a multiple of 10 and should preferably be between 11 and 105.";
     display: block;
@@ -67,18 +67,16 @@ body {
 }
 
 #challenge-area {
-    width: 85%;
-    padding-top: 30px;
     padding-bottom: 30px;
-    margin: 0 auto;
-    clear: both;
 }
 
+/*positioning of question area in challenge area*/
 #question-area {
     display: inline-block;
     padding-right: 30px;
 }
 
+/*positioning of score area in challenge area*/
 #score-area {
     display: inline-block;
     font-size: 1.2em;
@@ -86,10 +84,12 @@ body {
     padding-top: 30px;
 }
 
+/* Coloring for right answer in practice and challenge areas*/
 #correct {
     color: rgb(3, 250, 24);
 }
 
+/* Comment after the starting game button in the challenge area*/
 #button-start-game::after {
     content: "Answer the question below and press ENTER";
     display: block;
@@ -100,12 +100,14 @@ body {
     padding-bottom: 5px;
 }
 
+/*Code for removing arrows/spinners from number input fields to save space*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
+/*Media query for screen sizes less than 1000 pixels*/
 @media (max-width: 1000px) {
     .square-sum {
         width: 50%;
@@ -126,12 +128,13 @@ input::-webkit-inner-spin-button {
     }
 }
 
+/*Media query for screen sizes less than 700 pixels*/
 @media (max-width: 700px) {
     .heading {
         font-size: 2em;
     }
 
-    #theory {
+    #theory-area, #practice-area, #challenge-area {
         padding-top: 10px;
     }
 
@@ -147,12 +150,7 @@ input::-webkit-inner-spin-button {
         padding-top: 0;
     }
 
-    #practice-area {
-        padding-top: 10px;
-    }
-
     #challenge-area {
-        padding-top: 10px;
         padding-bottom: 10px;
     }
 
