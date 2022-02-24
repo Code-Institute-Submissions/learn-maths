@@ -34,12 +34,12 @@ The webpage is useful for primary or high school students in mathematics. It exp
 
 ## User goals
 - The user wants to learn the binomial squared identities in a clear step by step fashion without using formulas to begin with.
-- He wants to understand the use of these identities from a practical point of view, for example to calculate 23 squared.
+- He wants to understand the use of these identities from a practical point of view, for example in calculating 23 squared.
 - He wants to practice to consolidate his knowledge.
 - He wants to evaluate his skills.
 
 ## Structure of the website and wireframe
-Thee application was developped from the point of view of the user, and was wireframed with paper and pencil. It was decided to display the content in one page only so that the user does not have to click back and forth between pages. The content was divided into three sections:
+Thee application was developped from the point of view of the user, and was wireframed with paper and pencil. It was decided to display all the content in one page only so that the user does not have to click back and forth between pages because he needs to follow the example section later on. The content was divided into three sections:
 - One theory section explaining the basic steps of the binomial squared identities using a simple example.
 - A practice section where the student can follow the steps described in the previous section to calculate the square of a number of his choice.
 - A challenge section where the student can score himself calculating squares of randomly generated numbers. 
@@ -48,7 +48,7 @@ Thee application was developped from the point of view of the user, and was wire
 
 ### Colors
 - Font color: #445361
-- The icon comes from https://www.onlinewebfonts.com/
+- Background color: White (#fff)
 
 ### Fonts
 
@@ -94,13 +94,13 @@ The site owner wishes to add pages applying the same methodology to other areas 
 # Testing
 
 ## Functionality testing
-I checked that the application runs as expected both on PC and mobile. I verified that the input fields only accept numbers; that alerts are sent if the user enters a number less than six or a multiple of ten; that the color coding is correct and that the score is correct.
+I checked that the application runs as expected both on PC and mobile. I verified that the input fields only accept numbers; that alerts are sent if the user enters a number less than six or a multiple of ten in the practice area; that an alert is sent if the user tries to start the game again without answering the question in the challenge area; that the color coding is correct and that the score is correct.
 
 ## Responsiveness testing
 I tested the site on several virtual devices using devtools. I also tested it on my PC and on my mobile phone.
 
 ## Code validation
-- One error in the HTML file occuring in several places was detected by the W3C validator. It was the use of &sup for the exponent in input fields. I tried to fix the error by using `&amp;` but then it would not write the exponent so I left it unfixed.
+- One error in the HTML file occuring in several places was detected by the W3C validator. It was the use of the &sup symbol for the exponent in input fields. I tried to fix the error by using `&amp;` but then it would not write the exponent so I left it unfixed.
 - The CSS file passed through the W3C validator without errors.
 - The JavaScript file passes through the jshint.com validator without errors.
 
@@ -111,7 +111,7 @@ The accessibility score for my code was 88% according to lighthouse in devtools.
 <img src="assets/images/lighthouse-result.PNG">
 
 ## Unfixed bugs
-As mentioned there is one unfixed bug.
+As mentioned above there is one unfixed bug but the application works despite the error.
 
 [Back to Table of contents](#table-of-contents)
 
@@ -120,9 +120,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 * In the GitHub repository, navigate to the Settings tab and Pages link.
 * From the source section drop-down menu, select the Master or Main Branch
 * Once the Main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-Here is the link to the project:
-
- [Mental Maths](https://faridjos.github.io/learn-maths/index.html)
+Here is the link to the project: [Mental Maths](https://faridjos.github.io/learn-maths/index.html)
 
  [Back to Table of contents](#table-of-contents)
 
