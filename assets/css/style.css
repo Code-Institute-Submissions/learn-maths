@@ -64,7 +64,7 @@ body {
     position: relative;
     bottom: -0.5em;
     padding-bottom: 5px;
-    }
+}
 
 #challenge-area {
     width: 85%;
@@ -98,12 +98,12 @@ body {
     position: relative;
     bottom: -0.5em;
     padding-bottom: 5px;
-   }
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 @media (max-width: 1000px) {
@@ -112,25 +112,25 @@ input::-webkit-inner-spin-button {
         float: left;
         text-align: center;
     }
-    
+
     .square-diff {
         width: 50%;
         margin: 0 0 0 auto;
         text-align: center;
     }
-    
+
     .square-conjugate {
         width: 100%;
         float: left;
         text-align: center;
-    }  
+    }
 }
 
 @media (max-width: 700px) {
     .heading {
         font-size: 2em;
     }
-    
+
     #theory {
         padding-top: 10px;
     }
@@ -155,20 +155,22 @@ input::-webkit-inner-spin-button {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
     .square-sum {
         width: 100%;
         float: left;
     }
-    
+
     .square-diff {
         width: 100%;
         float: left;
     }
-    
+
     .square-conjugate {
         width: 100%;
         float: left;
-    }  
+    }
+
     body {
         text-align: center;
     }
@@ -176,7 +178,8 @@ input::-webkit-inner-spin-button {
     #question-area {
         display: block;
         padding-right: 0;
-}
+    }
+
     #score-area {
         display: block;
     }

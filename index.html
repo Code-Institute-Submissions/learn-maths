@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +12,22 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Mental Maths</title>
 </head>
+
 <body>
     <h1 class="heading">Mental Maths: Squaring<img id="logo" src="assets/images/x2.png" alt="logo"></h1>
 
     <section id="theory">
         <h2>Example: Calculate&ensp;23<sup>2</sup>,&ensp;17<sup>2</sup>,&ensp;and&ensp;23 x 17</h2>
         <ol>
-            <li><p>Divide the two numbers in two pieces each:&ensp;<span id="display-numbers">23 = 20 + 3&ensp;and&ensp;17 = 20 - 3</span></p></li>
-            <li><p>Use the so-called binomial squared identities:</p></li>
+            <li>
+                <p>Divide the two numbers in two pieces each:&ensp;<span id="display-numbers">23 = 20 +
+                        3&ensp;and&ensp;17 = 20 - 3</span></p>
+            </li>
+            <li>
+                <p>Use the so-called binomial squared identities:</p>
+            </li>
         </ol>
-                                
+
         <div class="square-sum">
             <div class="equation" id="first-equation">
                 <b>
@@ -32,11 +39,11 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="text" value="20&amp;sup2" readonly>
+                <input class="input-box" type="text" value="20&sup2" readonly>
                 <span> + </span>
                 <input class="input-box" type="text" value="2x20x3" readonly>
                 <span> + </span>
-                <input class="input-box" type="text" value="3&amp;sup2" readonly>
+                <input class="input-box" type="text" value="3&sup2" readonly>
             </div>
 
             <div class="equation">
@@ -47,7 +54,7 @@
                 <span> + </span>
                 <input class="input-box" type="number" value="9" readonly>
             </div>
-            
+
             <div class="equation">
                 <span>= </span>
                 <input class="input-box" type="number" value="529" readonly>
@@ -66,11 +73,11 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="text" value="20&amp;sup2" readonly>
+                <input class="input-box" type="text" value="20&sup2" readonly>
                 <span> - </span>
-                <input class="input-box" type="text" value="3&amp;sup2" readonly>
+                <input class="input-box" type="text" value="3&sup2" readonly>
             </div>
-        
+
             <div class="equation">
                 <span>= </span>
                 <input class="input-box" type="number" value="400" readonly>
@@ -94,11 +101,11 @@
 
             <div class="equation">
                 <span>= </span>
-                <input class="input-box" type="text" value="20&amp;sup2" readonly>
+                <input class="input-box" type="text" value="20&sup2" readonly>
                 <span> - </span>
                 <input class="input-box" type="text" value="2x20x3" readonly>
                 <span> + </span>
-                <input class="input-box" type="text" value="3&amp;sup2" readonly>
+                <input class="input-box" type="text" value="3&sup2" readonly>
             </div>
 
             <div class="equation">
@@ -109,19 +116,19 @@
                 <span> + </span>
                 <input class="input-box" type="number" value="9" readonly>
             </div>
-            
+
             <div class="equation">
                 <span>= </span>
                 <input class="input-box" type="number" value="289" readonly>
             </div>
-        </div>                         
+        </div>
     </section>
 
     <section id="practice-area">
         <h2>Practice Area</h2>
         <div id="input-user-number">
             <label for="user-number">Enter a Number and Press ENTER: </label>
-            <input class="input-box" id="user-number" type="number" min="11" max="105">                
+            <input class="input-box" id="user-number" type="number" min="11" max="105">
         </div>
         <div class="square-sum">
             <div class="equation">
@@ -140,7 +147,7 @@
                 <span> + </span>
                 <input class="input-box square-ones" type="number">
             </div>
-            
+
             <div class="equation">
                 <span>= </span>
                 <input class="input-box result" id="result-sum" type="number">
@@ -168,7 +175,7 @@
                 <span> - </span>
                 <input class="input-box square-ones" type="number">
             </div>
-        
+
             <div class="equation">
                 <span>= </span>
                 <input class="input-box result" id="result-conjugate" type="number">
@@ -197,7 +204,7 @@
                 <span> + </span>
                 <input class="input-box square-ones" type="number">
             </div>
-            
+
             <div class="equation">
                 <span>= </span>
                 <input class="input-box result" id="result-diff" type="number">
@@ -217,10 +224,10 @@
             </div>
             <div class="equation" id="question">
                 <b><span id="first-number">0</span>
-                <span ><sup id="exponent"></sup></span>
-                <span id="multiply-sign"> x </span>
-                <span id="second-number">0</span>
-                <span> = </span>
+                    <span><sup id="exponent"></sup></span>
+                    <span id="multiply-sign"> x </span>
+                    <span id="second-number">0</span>
+                    <span> = </span>
                 </b>
                 <input class="input-box" id="answer-box" type="number" required>
             </div>
@@ -230,7 +237,8 @@
             <span>Correct Answers: </span><span id="correct">0</span><span> of </span><span id="total">0</span>
         </div>
     </section>
-    
+
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
