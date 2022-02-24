@@ -154,17 +154,7 @@ input::-webkit-inner-spin-button {
         padding-bottom: 10px;
     }
 
-    .square-sum {
-        width: 100%;
-        float: left;
-    }
-
-    .square-diff {
-        width: 100%;
-        float: left;
-    }
-
-    .square-conjugate {
+    .square-sum, .square-diff, .square-conjugate {
         width: 100%;
         float: left;
     }
